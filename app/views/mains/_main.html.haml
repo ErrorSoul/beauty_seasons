@@ -4,30 +4,18 @@
       %p BEAUTY SEASONS — это не просто бьюти-студия, это Ваша история красоты...
       %p Посещая BEAUTY SEASONS, Вы каждый раз словно окунаетесь в мирэстетики и совершенства. Ведь при создании нашей студии мы старалисьвоплотить в жизнь желание истинных женщин быть не только красивыми, но и сияющими в любое время года.
       %p Наш подход к созданию истории красоты каждого клиента является по-настоящему уникальным: мы выбираем средства только с натуральными ингредиентами и бесспорным косметическим потенциалом.
-      #myCarousel.carousel.slide{"data-ride" => "carousel"}
-        %ol.carousel-indicators
-          %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-          %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-          %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
-          %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
-        / Wrapper for slides
+      #myCarousel.carousel.slide{"data-ride" => "carousel", style: 'margin-bottom: 20px'}
         .carousel-inner{:role => "listbox"}
-          .item.active
-            .col-md-6
-              %img{:alt => "Chania", :src => "img_chania.jpg"}
-            .col-md-6
-              %p 12.06.12
-              %p Новая тема
-              %p dfadsfadsfadsfasdf фывафывафываыфва ываыфвавфыавыфаф
-              %p dfadsfadsfadsfasdf
-              %p dfadsfadsfadsfasdf
-
-          .item
-            %img{:alt => "Chania", :src => "img_chania2.jpg"}
-          .item
-            %img{:alt => "Flower", :src => "img_flower.jpg"}
-          .item
-            %img{:alt => "Flower", :src => "img_flower2.jpg"}
+          %h4.news= "Новости:"
+          - @tigings.each_with_index do |tiging, ind|
+            .item(class="#{'active' if ind.zero?}"  id=ind)
+              .col-md-12
+                .col-md-5
+                  = image_tag(tiging.asset.url, class: 'img-responsive center-block')
+                .col-md-7.text-block
+                  %h6(style='text-align: center')= tiging.title
+                  %p= tiging.text.mb_chars.truncate(140).html_safe
+                  %a.news.to-news(href='#{tiging.id}') Подробнее
         / Left and right controls
         %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
           %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
@@ -41,7 +29,8 @@
             %button{:type => "submit", :value => "Submit"} Перезвоните мне
             %button{:type => "submit", :value => "Submit"} Записаться
 
-%section.page-1
+= render partial: 'about_us'
+= render partial: 'blocks'
 
 #my-popup.mfp-hide.order-popup
   = form_tag '/orders', remote: true do

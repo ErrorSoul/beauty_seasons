@@ -19,10 +19,11 @@ gem 'font-awesome-rails'
 
 # Markup
 gem 'haml'
-
+gem 'activeadmin', github: 'activeadmin'
 # Angular
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
+gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 
 # Devise
 gem 'devise'

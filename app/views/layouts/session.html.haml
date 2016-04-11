@@ -11,7 +11,7 @@
 
     = csrf_meta_tags
 
-  %body
+  %body(ng-app='app')
     = yield
     .javascripts
       = javascript_include_tag 'application'

@@ -8,23 +8,23 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %col-md-5
+        .col-xs-5.col-xs-offset-2
           = image_tag('logo.png', class: 'logo')
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav.main-navbar
           %li
-            %a{"data-target" => "page2", :href => "#page2"} О НАС
+            %a.page-scroll{"data-target" => "page2", :href => "#page-1"} О НАС
           %li
-            %a{"data-target" => "page3", :href => "#page3"} BEAUTY CLUB
+            %a.page-scroll{"data-target" => "page3", :href => "#beauty"} BEAUTY CLUB
           %li
-            %a{"data-target" => "page4", :href => "#page4"} КОСМЕТОЛОГИЯ
+            %a.page-scroll{"data-target" => "page4", :href => "#cosmetology"} КОСМЕТОЛОГИЯ
           %li
-            %a{"data-target" => "page5", :href => "#page5"} BOUTIQUE
+            %a.page-scroll{"data-target" => "page5", :href => "#boutique"} BOUTIQUE
           %li
-            %a{"data-target" => "page6", :href => "#page6"} КОНТАКТЫ
+            %a.page-scroll{"data-target" => "page6", :href => "#page-5"} КОНТАКТЫ
           %li
-            %a{"data-target" => "page7", :href => "#page7"} ПРЕССА
+            %a.page-scroll{"data-target" => "page7", :href => "#page-6"} ПРЕССА
 
 
         %ul.nav.navbar-nav.phones.visible-lg

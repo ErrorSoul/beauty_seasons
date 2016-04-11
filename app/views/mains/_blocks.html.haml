@@ -1,0 +1,35 @@
+
+- @blocks.each do |block|
+  %section.page-all(id= "#{block.code}")
+
+    .col-xs-12
+      %h2.title= block.name
+    .col-xs-12.image-row
+      .carousel.slide{"data-ride" => "carousel", id: "#{block.id.to_s + 'Carousel'}"}
+        .carousel-inner{:role => "listbox"}
+          .row
+            - block.parts.each_slice(5).with_index do |group, ind|
+              .item(class="#{'active' if ind.zero?}")
+                .col-md-12
+                  - group.each do |part|
+                    .col-xs-2
+                      .div.div-trigger(id="#{part.id}")
+                        = image_tag(part.mini_asset.url, class: 'img-responsive gray-image')
+                        %span.span-image= part.name
+
+        - if block.parts.size > 5
+          %a.left-a.carousel-control.left-control.left{"data-slide" => "prev", :href => "##{block.id.to_s + 'Carousel'}", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.right-a.carousel-control.right-control.right{"data-slide" => "next", :href => "##{block.id.to_s + 'Carousel'}", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+            %span.sr-only Next
+        - block.parts.each do |part|
+          .col-xs-12.col-md-12.content-about.image-row.hide-class(data-id="#{part.id}")
+            .col-xs-12.col-md-12
+              .row
+                .col-xs-10.col-md-10(style='margin-top: 40px' style='background-color: white')
+                  .col-xs-12.col-md-6
+                    =image_tag(part.asset.url, class: 'img-responsive')
+                  .col-md-6.col-xs-12
+                    %p= part.content.html_safe
