@@ -1,0 +1,12 @@
+en:
+  login: 'Login'
+  email: 'Email'
+  password: 'Password'
+  remember_me: 'Remember me'
+
+  template: 'Template'
+
+  report: Report
+  file: File
+  save: Save
+  name: Name

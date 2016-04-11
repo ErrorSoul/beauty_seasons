@@ -1,0 +1,7 @@
+en:
+  flash:
+    reports:
+      success:
+        created: 'Report successful created'
+      fail:
+        created: 'Something wrong with xlsx file'

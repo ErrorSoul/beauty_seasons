@@ -1,0 +1,2 @@
+.btn-group(aria-label=("Basic example") role="group")
+    %button.btn.btn-secondary.btn-success [

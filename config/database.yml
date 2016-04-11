@@ -1,0 +1,20 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: rotator_development
+
+test:
+  <<: *default
+  database: rotator_test
+
+
+production:
+  <<: *default
+  database: rotator_production
+  username: rotator
+  password: <%= ENV['ROTATOR_DATABASE_PASSWORD'] %>

@@ -1,0 +1,22 @@
+
+.col-sm-8.center-block(style='margin-top: 60px')
+  .panel.panel-default
+    .panel-heading
+      %h4= t(:report)
+
+    .panel-body
+      = form_for @report, url: admin_reports_url, class: 'form-horizontal', html: { multipart: true } do |f|
+
+        .form-group.col-sm-10
+          = f.label t(:name), class: 'control-label col-sm-2'
+          .col-sm-8
+            = f.text_field :name, class: 'form-control'
+
+        .form-group.col-sm-10
+          = f.label t(:file), class: 'control-label col-sm-2'
+          .col-sm-8
+            = f.file_field :asset, class: 'form-control'
+
+        .form-group.col-sm-10
+          = f.submit t(:save), class: "btn btn-large btn-success"
+          = link_to t(:template), template_admin_dashboard_path, class: 'btn btn-primary'

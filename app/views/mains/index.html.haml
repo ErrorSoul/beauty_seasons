@@ -1,0 +1,51 @@
+%headera.clearfix
+  %nav.navbar.navbar-default.with-cover.navbar-fixed-top
+    .container-fluid.pad-top
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header(style='margin-right: -10%')
+        %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %col-md-5
+          = image_tag('logo.png', class: 'logo')
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav.main-navbar
+          %li
+            %a{"data-target" => "page2", :href => "#page2"} О НАС
+          %li
+            %a{"data-target" => "page3", :href => "#page3"} BEAUTY CLUB
+          %li
+            %a{"data-target" => "page4", :href => "#page4"} КОСМЕТОЛОГИЯ
+          %li
+            %a{"data-target" => "page5", :href => "#page5"} BOUTIQUE
+          %li
+            %a{"data-target" => "page6", :href => "#page6"} КОНТАКТЫ
+          %li
+            %a{"data-target" => "page7", :href => "#page7"} ПРЕССА
+
+
+        %ul.nav.navbar-nav.phones.visible-lg
+          .col
+            = image_tag('phone.svg', size: '20x20')
+            +7 (495) 276 93 00
+          .col
+            = image_tag('phone.svg', size: '20x20')
+            +7 (926) 922 22 53
+
+        %ul.nav.navbar-nav.visible-lg(style='margin-left: 18px')
+          %button.btn.btn-default.call-button(id='open-popup')
+            Записаться
+          .col.social
+            %a{:href => "https://www.instagram.com/beauty_seasons_msk/", :target => "_blank"}
+              = image_tag('instagram.svg', size: '20x20')
+
+            %a{:href => "https://www.facebook.com/beautyseasonsmsk/?fref=ts", :target => "_blank"}
+              = image_tag('facebook.svg', size: '20x20')
+
+            %a{:href => "#youtube", :target => "_blank"}
+              = image_tag('youtube.svg', size: '20x20')
+
+= render partial: 'main'

@@ -1,0 +1,56 @@
+%section.page-1
+  .col-md-12.first-section
+    .col-md-4.col-md-offset-7
+      %p BEAUTY SEASONS — это не просто бьюти-студия, это Ваша история красоты...
+      %p Посещая BEAUTY SEASONS, Вы каждый раз словно окунаетесь в мирэстетики и совершенства. Ведь при создании нашей студии мы старалисьвоплотить в жизнь желание истинных женщин быть не только красивыми, но и сияющими в любое время года.
+      %p Наш подход к созданию истории красоты каждого клиента является по-настоящему уникальным: мы выбираем средства только с натуральными ингредиентами и бесспорным косметическим потенциалом.
+      #myCarousel.carousel.slide{"data-ride" => "carousel"}
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+          %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+          %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+          %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+        / Wrapper for slides
+        .carousel-inner{:role => "listbox"}
+          .item.active
+            .col-md-6
+              %img{:alt => "Chania", :src => "img_chania.jpg"}
+            .col-md-6
+              %p 12.06.12
+              %p Новая тема
+              %p dfadsfadsfadsfasdf фывафывафываыфва ываыфвавфыавыфаф
+              %p dfadsfadsfadsfasdf
+              %p dfadsfadsfadsfasdf
+
+          .item
+            %img{:alt => "Chania", :src => "img_chania2.jpg"}
+          .item
+            %img{:alt => "Flower", :src => "img_flower.jpg"}
+          .item
+            %img{:alt => "Flower", :src => "img_flower2.jpg"}
+        / Left and right controls
+        %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+          %span.sr-only Previous
+        %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+          %span.sr-only Next
+      = form_tag '/orders', id: 'content', remote: true do
+        %input{:name => "user", :placeholder => "Имя", :required => "", :type => "text"}
+          %input.js-phone-mask{:name => "phone", :placeholder => "Телефон", :required => "", :type => "text"}
+            %button{:type => "submit", :value => "Submit"} Перезвоните мне
+            %button{:type => "submit", :value => "Submit"} Записаться
+
+%section.page-1
+
+#my-popup.mfp-hide.order-popup
+  = form_tag '/orders', remote: true do
+    %h2 Записаться
+    %input#p_name.order-form{:name => "p_name", :placeholder => "Имя", :required => "", :type => "text"}
+    %input#p_phone.js-phone-mask.order-form{:name => "p_phone", :placeholder => "Телефон", :required => "", :type => "text"}
+    %input.button.order-form{:name => "btnsend", :type => "submit", :value => "Отправить"}
+
+
+#complete.mfp-hide.order-popup
+  %h2 Спасибо за заявку!
+  %p(style='color: #d6b271') Наш менеджер свяжется с Вами в ближайшее время

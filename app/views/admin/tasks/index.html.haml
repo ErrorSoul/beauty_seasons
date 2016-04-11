@@ -1,0 +1,27 @@
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t(:id)
+      %th= t(:fio)
+      %th= t(:email)
+      %th= t(:phone)
+      %th= t(:link)
+      %th= t(:status)
+
+  %tbody
+
+    - if @tasks.empty?
+      %tr
+        %td(colspan='10')=  t :not_found
+
+    - else
+      - @tasks.each do |task|
+        %tr
+          %td= task.id
+          %td= task.fio
+          %td= task.email
+          %td= task.phone
+          %th= task.link
+          %td
+            %span(class="#{status_label(task.status)}")= task.status

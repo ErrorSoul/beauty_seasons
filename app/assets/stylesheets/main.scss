@@ -1,0 +1,210 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+
+ [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.center-block {
+  float: none;
+  }
+
+.margin-top {
+  margin-top: 120px;
+  }
+
+.text-center {
+  text-align: center;
+  }
+
+.image-table {
+  height: 200px;
+  width: 300px;
+  }
+
+.with-cover {
+  background-image: image-url('head.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75px;
+  margin-right: -10px;
+  margin-left: -10px;
+
+}
+.pad-top {
+  padding-top: 1%;
+
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: -10%;
+  right: -10%;
+  background-image: image-url('head.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75px;
+  z-index: 100;
+}
+.logo {
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 18px;
+}
+.navigation {
+  font-family: "Noto Serif";
+  font-size: 12px;
+  margin: 20px auto;
+  padding-left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-fixed-top {
+  border: 0px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: black;
+  font-family: "Noto Serif";
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+  padding-left: 0px;
+  &:hover {
+    color: rgb(166, 127, 70);
+
+  }
+}
+
+.phones {
+  font-family: 'Minion Pro Bold';
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+.call-button {
+  background-color: black;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  color: #ffe49d;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  &:hover, &:active, &:focus {
+    background-color: black;
+    color: #ffe49d;
+
+  }
+}
+
+.social {
+  padding: 3px 29px;
+}
+
+html, body {
+
+    height:100%;
+    width:100%;
+}
+section {
+  display: block;
+   height:100%;
+   width:100%;
+   box-sizing:border-box;
+}
+section.page-1 {
+  background-image: image-url('main.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first-section {
+  margin-top: 7%;
+  color: white;
+}
+
+.order-popup {
+  background-color: rgba(0, 0, 0, 0.55);
+  position: relative;
+  padding: 40px;
+  width: 50%;
+  max-width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #ffe49d;
+  h2 {
+    color: #ffe49d;
+    margin-bottom: 40px;
+  }
+  form input {
+    background: transparent;
+    border: 1px solid #d6b271;
+    border-radius: 15px;
+    text-align: center;
+    color: #d6b271;
+    width: 45%;
+    margin: 1% 2%;
+    font-family: "Minion Pro Bold";
+  }
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+input:focus, input:active, button:focus, button:active {
+  outline: none !important;
+}
+
+.order-form {
+  margin-top: 20px;
+  width: 50px;
+  height: 40px;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #d6b271;
+  &:hover {
+    background-color: #d6b271;
+    color: white;
+  }
+}
+
+#content input {
+    background: transparent;
+    border: 1px solid #d6b271;
+    border-radius: 15px;
+    text-align: center;
+    color: #d6b271;
+    width: 45%;
+    margin: 1% 2%;
+    height: 40px;
+    font-family: "Minion Pro Bold";
+    margin-bottom: 20px;
+}
+
+#content button {
+  background: transparent;
+    border: 1px solid #d6b271;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    width: 45%;
+    margin: 1% 2%;
+    height: 40px;
+    text-transform: uppercase;
+    font-family: "Minion Pro Bold";
+    font-weight: bolder;
+    transition: 0.5s ease;
+    &:hover {
+      background-color: #d6b271;
+      transition: 0.5s ease;
+      color: #1f1f1f
+    }
+}
